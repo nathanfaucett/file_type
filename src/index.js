@@ -1,4 +1,5 @@
-var SVG = /<svg[^>]+xmlns="http:\/\/www\.w3\.org\/2000\/svg"[^>]*>/;
+var hasOwnProp = Object.prototype.hasOwnProperty,
+    SVG = /<svg[^>]+xmlns="http:\/\/www\.w3\.org\/2000\/svg"[^>]*>/;
 
 
 function fileType(value) {
@@ -6,7 +7,11 @@ function fileType(value) {
         key;
 
     for (key in fileType) {
-        if (fileType[key](buf)) return key;
+        if (hasOwnProp.call(fileType, key)) {
+            if (fileType[key](buf)) {
+                return key;
+            }
+        }
     }
 
     return undefined;
