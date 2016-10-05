@@ -1,6 +1,6 @@
 {
   "name": "@nathanfaucett/file_type",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "file type for the browser and node.js",
   "repository": {
     "type": "git",
@@ -20,6 +20,6 @@
     "grunt-jsbeautifier": "^0.2.13"
   },
   "dependencies": {
-    "@nathanfaucett/has": "^0.0.1"
+    "@nathanfaucett/has": "^0.0.2"
   }
 }
